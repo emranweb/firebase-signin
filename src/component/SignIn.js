@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import {signInWithGoogle} from "../firebase/firebase-utils";
 
 class SignIn extends React.Component {
 
@@ -60,7 +61,7 @@ class SignIn extends React.Component {
                 </Button>
               </Form>
 
-              <Button variant="primary" size="lg" className="px-5 mr-3">
+              <Button onClick={signInWithGoogle} variant="primary" size="lg" className="px-5 mr-3">
                 Google
               </Button>
               <Button variant="primary" size="lg" className="px-5">

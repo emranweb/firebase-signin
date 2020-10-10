@@ -4,11 +4,24 @@ import Home from "./component/Home.js";
 import Header from "./component/Header";
 import SignIn from "./component/SignIn";
 import SignUp from "./component/SignUp";
+import {auth} from "./firebase/firebase-utils"
 
 class App extends React.Component {
   constructor() {
     super();
-    this.state = { user: [] };
+    this.state = { user: [], currentUser:null };
+  }
+
+  unSuscribeFromAuth = null;
+
+  componentDidMount(){
+    this.unSuscribeFromAuth= auth.onAuthStateChanged(user=>{
+      this.setState({currentUser:user});
+    })
+  }
+
+  componentWillUnmount(){
+    this.unSuscribeFromAuth();
   }
 
   getUserData = (value) => {
