@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 function SignIn() {
   return (
@@ -32,12 +32,17 @@ function SignIn() {
               <Button variant="primary" size="lg" className="px-5 mb-4">
                 Login
               </Button>
-
             </Form>
 
-            <Button variant="primary" size="lg" className="px-5 mr-3"> Google </Button>
-            <Button variant="primary" size="lg" className="px-5">Facbook</Button>
-            <Link className="d-block mt-4" to="/signup">Don't Have any account</Link>
+            <Button variant="primary" size="lg" className="px-5 mr-3">
+              Google
+            </Button>
+            <Button variant="primary" size="lg" className="px-5">
+              Facbook
+            </Button>
+            <Link className="d-block mt-4" to="/signup">
+              Don't Have any account
+            </Link>
           </Col>
         </Row>
       </Container>
