@@ -4,7 +4,7 @@ import Home from "./component/Home.js";
 import Header from "./component/Header";
 import SignIn from "./component/SignIn";
 import SignUp from "./component/SignUp";
-import {auth} from "./firebase/firebase-utils"
+import {auth, createUserProfile} from "./firebase/firebase-utils"
 
 class App extends React.Component {
   constructor() {
